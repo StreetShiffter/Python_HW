@@ -30,4 +30,4 @@ def get_date(input_string: str) -> str:
 
 
 # test = "2024-03-11T02:26:18.671407" # Для предварительного тестирования
-# print(get_date(test))
+
