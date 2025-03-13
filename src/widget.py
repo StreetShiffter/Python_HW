@@ -12,11 +12,11 @@ def mask_account_card(string: str) -> tuple[str, str]:
     return name_card_or_score, number_card_or_score
 
 
-    test = "Visa Platinum 8990922113665229"  # Для предварительного тестирования
-    name_card, number_card = mask_account_card(test)
+# test = "Visa Platinum 8990922113665229"
+# name_card, number_card = mask_account_card(test)
 
-    masked_number = get_mask_card_number(number_card)
-    print(f"{name_card}: {masked_number}")
+# masked_number = get_mask_card_number(number_card)
+##print(f"{name_card}: {masked_number}")
 
 
 def get_date(input_string: str) -> str:
@@ -29,5 +29,5 @@ def get_date(input_string: str) -> str:
     return f"{date_string[6:8]}.{date_string[4:6]}.{date_string[0:4]}"
 
 
-# test = "2024-03-11T02:26:18.671407" # Для предварительного тестирования
-
+# test_2 = "2024-03-11T02:26:18.671407"
+# print(get_date(test_2))
