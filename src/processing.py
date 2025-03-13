@@ -8,12 +8,29 @@ def filter_by_state(list_data: list[dict], status: str) -> list[dict[str, str | 
     return list_dict_check
 
 
-test = [
-    {"id": 41428829, "state": "EXECUTED", "date": "2019-07-03T18:35:29.512364"},
-    {"id": 939719570, "state": "EXECUTED", "date": "2018-06-30T02:08:58.425572"},
-    {"id": 594226727, "state": "CANCELED", "date": "2018-09-12T21:27:25.241689"},
-    {"id": 615064591, "state": "CANCELED", "date": "2018-10-14T08:21:33.419441"},
-]
-check_word = "EXECUTED"
-result = filter_by_state(test, check_word)
-print(result)
+# test = [
+#     {"id": 41428829, "state": "EXECUTED", "date": "2019-07-03T18:35:29.512364"},
+#     {"id": 939719570, "state": "EXECUTED", "date": "2018-06-30T02:08:58.425572"},
+#     {"id": 594226727, "state": "CANCELED", "date": "2018-09-12T21:27:25.241689"},
+#     {"id": 615064591, "state": "CANCELED", "date": "2018-10-14T08:21:33.419441"},ы
+# ]
+# check_word = "EXECUTED"
+# result = filter_by_state(test, check_word)
+# print(result)
+
+
+def sort_by_date(list_check_date: list[dict], value_sort: bool) -> list[dict]:
+    """Функция сортировки даты"""
+    sorting = sorted(list_check_date, key=lambda x: x["date"], reverse=value_sort)
+    return sorting
+
+
+# test_data = [
+#     {"id": 41428829, "state": "EXECUTED", "date": "2019-07-03T18:35:29.512364"},
+#     {"id": 939719570, "state": "EXECUTED", "date": "2018-06-30T02:08:58.425572"},
+#     {"id": 594226727, "state": "CANCELED", "date": "2018-09-12T21:27:25.241689"},
+#     {"id": 615064591, "state": "CANCELED", "date": "2018-10-14T08:21:33.419441"},
+# ]
+# sorting_value = True
+# result_data = sort_by_date(test_data, sorting_value)
+# print(result_data)
