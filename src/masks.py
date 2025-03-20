@@ -5,13 +5,16 @@ import pytest
 def get_mask_card_number(number_card: Union[int, str]) -> str:
     """Функция, которая маскирует предпоследние 6 цифр"""
     card_number = str(number_card).replace(" ", "")
-    if len(card_number) < 16 or len(card_number) > 16: # Проверка на длину
-        raise ValueError("Введите ровно 16 символов карты!")
-    if not card_number.isdigit(): #Проверка на числовое значение
+    if not card_number.isdigit(): # Проверка на числовое значение
         raise ValueError("Введите числовое значение")
 
+    if len(card_number) == 16: # Маскировка для 16 символов
+        return f"{card_number[:4]} {card_number[4:6]}** **** {card_number[-4:]}"
 
-    return f"{card_number[:4]} {card_number[4:6]}{'**'} {'****'} {card_number[-4:]}"
+    elif len(card_number) == 21: # Маскировка для 21 символа
+        return f"{card_number[:11]}******{card_number[-4:]}"
+
+    raise ValueError("Неверный номер карты! Введите 16 или 21 символ.")
 
 
 def get_mask_account(number_account: Union[int, str]) -> str:
@@ -26,8 +29,8 @@ def get_mask_account(number_account: Union[int, str]) -> str:
 
     return f"** {visible_numbers}"
 
-test = "1234 5678 9876 5435"
-result = get_mask_account(test)
-print(result)
+# test = "1234 5678 9876 5435"
+# result = get_mask_card_number(test)
+# print(result)
 
 

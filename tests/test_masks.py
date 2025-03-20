@@ -18,9 +18,13 @@ def test_invalid_card_number(input_string):
          get_mask_card_number(input_string)
 
 
-def test_mask_card_number(info_string):
-    assert get_mask_card_number(info_string) == "1234 56** **** 5432"
-    assert get_mask_card_number(info_string) != "1234 567* **** *432"
+def test_mask_card_number(info_string_card):
+    assert get_mask_card_number(info_string_card) == "1234 56** **** 5432"
+    assert get_mask_card_number(info_string_card) != "1234 567* **** *432"
+
+def test_mask_card_score(info_string_score):
+    assert get_mask_card_number(info_string_score) == "12345678987******5961"
+    assert get_mask_card_number(info_string_score) != "12345678987 ****** 5961"
 
 @pytest.mark.parametrize('input_num, result_num', [
     ("9876 5432 1023 4567", "** 4567" ),
@@ -38,6 +42,6 @@ def test_invalid_account_number(try_string):
     with pytest.raises(ValueError):
         get_mask_account(try_string)
 
-def test_mask_account_number(info_string):
-    assert get_mask_account(info_string) == "** 5432"
-    assert get_mask_account(info_string) != "** *432"
+def test_mask_account_number(info_string_card):
+    assert get_mask_account(info_string_card) == "** 5432"
+    assert get_mask_account(info_string_card) != "** *432"
