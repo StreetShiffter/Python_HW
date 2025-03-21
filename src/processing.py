@@ -1,4 +1,4 @@
-def filter_by_state(list_data: list[dict[str,str]], state: str = 'EXECUTED') -> list[dict[str, str | int]]:
+def filter_by_state(list_data: list[dict[str, str]], state: str = "EXECUTED") -> list[dict]:
     """Функция сортировки словарей по значению"""
     list_dict_check = []
     for item in list_data:
@@ -6,6 +6,8 @@ def filter_by_state(list_data: list[dict[str,str]], state: str = 'EXECUTED') -> 
             list_dict_check.append(item)
 
     return list_dict_check
+
+
 #
 
 # test = [
@@ -18,7 +20,7 @@ def filter_by_state(list_data: list[dict[str,str]], state: str = 'EXECUTED') -> 
 # print(result)
 
 
-def sort_by_date(list_check_date: list[dict], value_sort:bool = True) -> list[dict]:
+def sort_by_date(list_check_date: list[dict], value_sort: bool = True) -> list[dict]:
     """Функция сортировки даты"""
     for item in list_check_date:
         if "date" not in item or item["date"] is None or item["date"].strip() == "":
@@ -27,7 +29,7 @@ def sort_by_date(list_check_date: list[dict], value_sort:bool = True) -> list[di
             raise TypeError("Значение даты должно быть числовым значением")
         if item["date"].isalpha():
             raise TypeError("Ошибка строки даты")
-    sorting = sorted(list_check_date, key=lambda x: x["date"], reverse = value_sort)
+    sorting = sorted(list_check_date, key=lambda x: x["date"], reverse=value_sort)
     return sorting
 
 
