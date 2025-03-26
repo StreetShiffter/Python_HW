@@ -1,5 +1,5 @@
 import pytest
-from src.generators import filter_by_currency
+from src.generators import filter_by_currency, transaction_descriptions
 
 def test_filter_by_currency(list_gen: tuple[list[dict], list[dict]]) -> None:
     test, result = list_gen
@@ -59,5 +59,21 @@ def test_filter_by_currency_unique(list_gen_data: list[dict], state: str, expect
 
 def test_rise_filter_by_currency()-> None:
     transactions = []
-    with pytest.raises(TypeError):
-        filter_by_currency(transactions)
+    with pytest.raises(ValueError):
+        next(filter_by_currency(transactions, "USD"))
+
+
+def test_transaction_descriptions(right_description) -> None:
+    expected = [
+        "Перевод организации",
+        "Перевод со счета на счет",
+        "Отсутствует описание"
+    ]
+    iterations = list(transaction_descriptions(right_description))
+    assert iterations == expected
+
+
+def test_rise_transaction_descriptions() -> None:
+    list_none = []
+    with pytest.raises(ValueError):
+        next(transaction_descriptions(list_none))
