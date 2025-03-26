@@ -35,8 +35,8 @@ def test_filter_by_state(info_state: list[dict]) -> None:
     ],
      ),
     ("UNKNOWN", []),
-    ("", []),
-],
+    ("", [])
+]
                          )
 def test_filter_by_state_check(info_state: list[dict], state: str, expected: list[dict]) -> None:
     assert filter_by_state(info_state, state) == expected
