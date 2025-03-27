@@ -27,8 +27,6 @@ def sort_by_date(list_check_date: list[dict], value_sort: bool = True) -> list[d
             raise TypeError("Отсутствует дата в одном из элементов")
         if isinstance(item["date"], str) and item["date"].isalpha():
             raise TypeError("Значение даты должно быть числовым значением")
-        if item["date"].isalpha():
-            raise TypeError("Ошибка строки даты")
     sorting = sorted(list_check_date, key=lambda x: x["date"], reverse=value_sort)
     return sorting
 

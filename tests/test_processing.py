@@ -101,7 +101,7 @@ def test_sort_date_valid_format() -> None:
         {"id": 1, "state": "EXECUTED", "date": "invalid-date"},
         {"id": 2, "state": "EXECUTED", "date": ""},
         {"id": 3, "state": "EXECUTED", "date": None},
-        {"id": 4, "state": "EXECUTED", "date": "not-a-date"}
+        {"id": 4, "state": "EXECUTED", "date": "@*&"}
     ]
     with pytest.raises(TypeError):
         sort_by_date(data_with_invalid_dates)
