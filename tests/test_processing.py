@@ -105,3 +105,8 @@ def test_sort_date_valid_format() -> None:
     ]
     with pytest.raises(TypeError):
         sort_by_date(data_with_invalid_dates)
+
+def test_sort_by_date_not_value():
+    data = [{"date": "test"}]
+    with pytest.raises(TypeError, match="Значение даты должно быть числовым значением"):
+        sort_by_date(data)
