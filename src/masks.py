@@ -1,3 +1,4 @@
+from decorators import log
 from typing import Union
 
 
@@ -14,6 +15,9 @@ def get_mask_card_number(number_card: Union[int, str]) -> str:
         return f"{card_number[:11]}******{card_number[-4:]}"
 
     raise ValueError("Неверный номер карты! Введите 16 или 21 символ.")
+
+# test = "12345896741258596"
+# get_mask_card_number(test)
 
 
 def get_mask_account(number_account: Union[int, str]) -> str:
