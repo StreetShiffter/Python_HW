@@ -1,7 +1,7 @@
-from decorators import log
 from typing import Union
-
-
+# from decorators import log
+#
+# @log(filename="mylog.txt")
 def get_mask_card_number(number_card: Union[int, str]) -> str:
     """Функция, которая маскирует предпоследние 6 цифр"""
     card_number = str(number_card).replace(" ", "")
@@ -16,7 +16,7 @@ def get_mask_card_number(number_card: Union[int, str]) -> str:
 
     raise ValueError("Неверный номер карты! Введите 16 или 21 символ.")
 
-# test = "12345896741258596"
+# test = "1234589674125896"
 # get_mask_card_number(test)
 
 
