@@ -35,8 +35,8 @@ def test_filter_by_state(info_state: list[dict]) -> None:
     ],
      ),
     ("UNKNOWN", []),
-    ("", []),
-],
+    ("", [])
+]
                          )
 def test_filter_by_state_check(info_state: list[dict], state: str, expected: list[dict]) -> None:
     assert filter_by_state(info_state, state) == expected
@@ -101,7 +101,12 @@ def test_sort_date_valid_format() -> None:
         {"id": 1, "state": "EXECUTED", "date": "invalid-date"},
         {"id": 2, "state": "EXECUTED", "date": ""},
         {"id": 3, "state": "EXECUTED", "date": None},
-        {"id": 4, "state": "EXECUTED", "date": "not-a-date"}
+        {"id": 4, "state": "EXECUTED", "date": "@*&"}
     ]
     with pytest.raises(TypeError):
         sort_by_date(data_with_invalid_dates)
+
+def test_sort_by_date_not_value():
+    data = [{"date": "test"}]
+    with pytest.raises(TypeError, match="Значение даты должно быть числовым значением"):
+        sort_by_date(data)
