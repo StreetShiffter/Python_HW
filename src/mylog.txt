@@ -1,0 +1,4 @@
+
+get_mask_card_number error: ValueError. Inputs: ('карта',), {}
+get_mask_card_number error: ValueError. Inputs: ('12345896741258596',), {}
+get_mask_card_number ok
