@@ -5,9 +5,9 @@ from functools import wraps
 def log(filename=None):
     """Декоратор для логирования выполнения функций"""
 
-    def decorator(func):
+    def decorator(func: any):
         @wraps(func)
-        def wrapper(*args, **kwargs):
+        def wrapper(*args, **kwargs: dict[str | any]):
             # Определяем куда писать логи
             output = open(filename, 'a', encoding='utf-8') if filename else sys.stdout
 
