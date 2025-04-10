@@ -1,7 +1,7 @@
 from typing import Generator
 
 
-def filter_by_currency(transactions: list[dict], code: str) -> Generator[dict]:
+def filter_by_currency(transactions: list[dict], code: str) -> Generator[dict, None, None]:
     """Функция предоставления доступных транзакций"""
     if not transactions:
         raise ValueError("Передано пустое значение!")
@@ -10,7 +10,7 @@ def filter_by_currency(transactions: list[dict], code: str) -> Generator[dict]:
             yield item
 
 
-def transaction_descriptions(transactions: list[dict]) -> Generator[str]:
+def transaction_descriptions(transactions: list[dict]) -> Generator[str, None, None]:
     """Функция-генератор для выдачи описания транзакции"""
     if not transactions:
         raise ValueError("Передано пустое значение!")

@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 load_dotenv()
 API_KEY = os.getenv("API")
 
-MY_KEY_API = "API"  # Не забудьте вставить свой API ключ'
+
 
 
 def currency_exchange(output_code: str, input_code: str, amount: int | float) -> dict:
@@ -60,5 +60,7 @@ transaction = [
     "to": "Счет 35383033474447895560"
   }]
 
-result=transaction_info(transaction)
-print(type(result))
+if __name__ == "__main__":
+
+    result=transaction_info(transaction)
+    print(type(result))
