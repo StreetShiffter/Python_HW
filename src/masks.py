@@ -3,7 +3,7 @@ import logging
 
 loger_func = logging.getLogger(__name__) # логер к текущему модулю
 file_handler = logging.FileHandler('../logs/example.log', encoding = 'utf-8')
-file_formatter = logging.Formatter('%(asctime)s %(levelname)s: %(message)s')
+file_formatter = logging.Formatter('%(asctime)s %(filename)s %(funcName)s %(levelname)s: %(message)s')
 file_handler.setFormatter(file_formatter)
 loger_func.addHandler(file_handler)
 loger_func.setLevel(logging.DEBUG)
