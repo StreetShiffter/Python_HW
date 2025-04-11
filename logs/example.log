@@ -1,0 +1,16 @@
+2025-04-12 00:40:14,278 INFO: Успешная маскировка номера карты: 1234 58** **** 5896
+2025-04-12 00:40:30,699 INFO: Успешная маскировка номера карты: 1234 58** **** 5896
+2025-04-12 00:40:45,452 ERROR: Неверный номер карты! Введено: 12345896741258896
+2025-04-12 00:41:07,301 ERROR: Неверный номер карты! Введено: 5
+2025-04-12 00:42:34,916 ERROR: Введено нечисловое значение: k
+2025-04-12 00:42:46,034 ERROR: Неверный номер карты! Введено: 5
+2025-04-12 00:47:10,323 INFO: Успешная маскировка номера карты: 1234 56** **** 5435
+2025-04-12 00:47:23,304 INFO: Успешная маскировка номера карты: 1234 56** **** 5435
+2025-04-12 00:47:33,274 ERROR: Неверный номер карты! Введено: 1234 5678 59876 5435
+2025-04-12 00:47:48,007 ERROR: Введено нечисловое значение: o
+2025-04-12 00:56:02,648 masks.py get_mask_card_number ERROR: Введено нечисловое значение: o
+2025-04-12 01:12:58,916 utils.py read_file INFO: Успешное чтение JSON: C:\Users\AGMan\Documents\Python_homework_1\src\../data/operations.json
+2025-04-12 01:13:32,881 utils.py read_file ERROR: Файл не найден по пути: C:\Users\AGMan\Documents\Python_homework_1\src\../data/operation.json
+2025-04-12 01:16:20,706 utils.py read_file INFO: Успешное чтение JSON: C:\Users\AGMan\Documents\Python_homework_1\src\../data/operations.json
+2025-04-12 01:16:34,954 utils.py read_file ERROR: Ошибка при декодировании JSON из файла: C:\Users\AGMan\Documents\Python_homework_1\src\../data/operations.json
+2025-04-12 01:16:47,862 utils.py read_file ERROR: Ошибка при декодировании JSON из файла: C:\Users\AGMan\Documents\Python_homework_1\src\../data/operations.json
