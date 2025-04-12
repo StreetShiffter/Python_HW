@@ -1,21 +1,24 @@
 import json
-import os
 import logging
-
-
-
-loger_func = logging.getLogger(__name__) # логер к текущему модулю
-file_handler = logging.FileHandler('../logs/example.log', encoding = 'utf-8')
-file_formatter = logging.Formatter('%(asctime)s %(filename)s %(funcName)s %(levelname)s: %(message)s')
-file_handler.setFormatter(file_formatter)
-loger_func.addHandler(file_handler)
-loger_func.setLevel(logging.DEBUG)
+import os
 
 # Получаем путь к текущему скрипту
 script_dir = os.path.dirname(os.path.abspath(__file__))
 
 # Определяем путь к файлу относительно текущего скрипта
 file_path = os.path.join(script_dir, "../data/operations.json")
+# file_path = os.path.join(script_dir, "data","operations.json")# не видит виртуалку
+print(file_path)
+file_path_1 = os.path.join(script_dir, "../logs/example.log")
+
+
+loger_func = logging.getLogger(__name__) # логер к текущему модулю
+file_handler = logging.FileHandler(file_path_1, encoding = 'utf-8')
+file_formatter = logging.Formatter('%(asctime)s %(filename)s %(funcName)s %(levelname)s: %(message)s')
+file_handler.setFormatter(file_formatter)
+loger_func.addHandler(file_handler)
+loger_func.setLevel(logging.DEBUG)
+
 
 
 def read_file(filename: str) -> list[dict]:

@@ -31,8 +31,8 @@ def get_mask_card_number(number_card: Union[int, str]) -> str:
     loger_func.error("Неверный номер карты! Введено: %s", number_card)
     raise ValueError("Неверный номер карты! Введите 16 или 21 символ.")
 
-# test = 5
-# get_mask_card_number(test)
+test = 5
+get_mask_card_number(test)
 
 
 def get_mask_account(number_account: Union[int, str]) -> str:
