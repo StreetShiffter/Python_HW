@@ -1,13 +1,22 @@
-2025-04-12 17:25:15,894 utils.py read_file ERROR: Файл не найден по пути: C:\Users\AGMan\Documents\Python_homework_1\src\data\operations.json
-2025-04-12 17:26:18,271 utils.py read_file ERROR: Файл не найден по пути: C:\Users\AGMan\Documents\Python_homework_1\src\data\operations.json
-2025-04-12 17:27:00,250 utils.py read_file ERROR: Файл не найден по пути: C:\Users\AGMan\Documents\Python_homework_1\src\data\operations.json
-2025-04-12 17:27:06,450 utils.py read_file ERROR: Файл не найден по пути: C:\Users\AGMan\Documents\Python_homework_1\src\data\operations.json
-2025-04-12 17:27:06,451 utils.py read_file INFO: Успешное чтение JSON: C:\Users\AGMan\Documents\Python_homework_1\.\data\operations.json
-2025-04-12 17:27:18,823 utils.py read_file ERROR: Файл не найден по пути: C:\Users\AGMan\Documents\Python_homework_1\src\data\operations.json
-2025-04-12 17:27:18,824 utils.py read_file INFO: Успешное чтение JSON: C:\Users\AGMan\Documents\Python_homework_1\data\operations.json
-2025-04-12 17:27:44,486 utils.py read_file ERROR: Файл не найден по пути: C:\Users\AGMan\Documents\Python_homework_1\src\data\operations.json
-2025-04-12 17:27:50,832 utils.py read_file ERROR: Файл не найден по пути: C:\Users\AGMan\Documents\Python_homework_1\src\data\operations.json
-2025-04-12 17:27:50,834 utils.py read_file INFO: Успешное чтение JSON: C:\Users\AGMan\Documents\Python_homework_1\data\operations.json
-2025-04-12 17:28:33,203 utils.py read_file ERROR: Файл не найден по пути: C:\Users\AGMan\Documents\Python_homework_1\src\operations.json
-2025-04-12 17:28:58,800 utils.py read_file INFO: Успешное чтение JSON: C:\Users\AGMan\Documents\Python_homework_1\src\../data/operations.json
-2025-04-12 17:33:25,326 utils.py read_file INFO: Успешное чтение JSON: C:\Users\AGMan\Documents\Python_homework_1\src\../data/operations.json
+2025-04-13 11:07:10,322 masks.py get_mask_account INFO: Успешная маскировка номера карты: 1230 8520 9632 7412
+2025-04-13 11:07:19,170 masks.py get_mask_account INFO: Успешная маскировка номера карты: 1230 8520 9632 75412
+2025-04-13 11:07:23,498 masks.py get_mask_account INFO: Успешная маскировка номера карты: 1230 8520 9632 7565636412
+2025-04-13 11:07:31,645 masks.py get_mask_account INFO: Успешная маскировка номера карты: 1230 8520 9632 7565635636412
+2025-04-13 11:07:47,073 masks.py get_mask_account ERROR: 55
+Traceback (most recent call last):
+  File "C:\Users\AGMan\Documents\Python_homework_1\src\masks.py", line 47, in get_mask_account
+    raise ValueError("Короткий номер")
+ValueError: Короткий номер
+2025-04-13 11:08:15,063 masks.py get_mask_account INFO: Успешная маскировка номера карты: 5522
+2025-04-13 11:09:43,440 masks.py get_mask_account INFO: Успешная маскировка номера карты: 5522
+2025-04-13 11:10:20,966 masks.py get_mask_account ERROR: sfvf
+Traceback (most recent call last):
+  File "C:\Users\AGMan\Documents\Python_homework_1\src\masks.py", line 45, in get_mask_account
+    raise ValueError("Введите числовое значение")
+ValueError: Введите числовое значение
+2025-04-13 11:10:58,316 utils.py read_file INFO: Успешное чтение JSON: C:\Users\AGMan\Documents\Python_homework_1\src\../data/operations.json
+2025-04-13 11:18:08,433 masks.py get_mask_account ERROR: sfvf
+Traceback (most recent call last):
+  File "C:\Users\AGMan\Documents\Python_homework_1\src\masks.py", line 45, in get_mask_account
+    raise ValueError("Введите числовое значение")
+ValueError: Введите числовое значение

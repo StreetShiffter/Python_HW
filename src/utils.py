@@ -8,7 +8,6 @@ script_dir = os.path.dirname(os.path.abspath(__file__))
 # Определяем путь к файлу относительно текущего скрипта
 file_path = os.path.join(script_dir, "../data/operations.json")
 # file_path = os.path.join(script_dir, "data","operations.json")# не видит виртуалку
-print(file_path)
 file_path_1 = os.path.join(script_dir, "../logs/example.log")
 
 
@@ -36,11 +35,11 @@ def read_file(filename: str) -> list[dict]:
         return data
     except FileNotFoundError:
         print(f"Файл не найден по пути: {filename}")
-        loger_func.error("Файл не найден по пути: %s", filename)
+        loger_func.error("Файл не найден по пути: %s", filename, exc_info = True)
         return []
     except json.JSONDecodeError:
         print(f"Ошибка при декодировании JSON из файла: {filename}")
-        loger_func.error("Ошибка при декодировании JSON из файла: %s", filename)
+        loger_func.error("Ошибка при декодировании JSON из файла: %s", filename, exc_info = True)
         return []
 
 data = read_file(file_path)
