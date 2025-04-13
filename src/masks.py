@@ -1,37 +1,61 @@
 from typing import Union
-# from decorators import log
+import logging
+
+loger_func = logging.getLogger(__name__) # логер к текущему модулю
+file_handler = logging.FileHandler('../logs/example.log', encoding = 'utf-8')
+file_formatter = logging.Formatter('%(asctime)s %(filename)s %(funcName)s %(levelname)s: %(message)s')
+file_handler.setFormatter(file_formatter)
+loger_func.addHandler(file_handler)
+loger_func.setLevel(logging.DEBUG)
+
+
+
+
+# def get_mask_card_number(number_card: Union[int, str]) -> str:
+#     """Функция, которая маскирует предпоследние 6 цифр"""
+#     card_number = str(number_card).replace(" ", "")
+#     try:
+#         if not card_number.isdigit():  # Проверка на числовое значение
+#             raise ValueError("Введите числовое значение")
 #
-# @log(filename="mylog.txt")
-def get_mask_card_number(number_card: Union[int, str]) -> str:
-    """Функция, которая маскирует предпоследние 6 цифр"""
-    card_number = str(number_card).replace(" ", "")
-    if not card_number.isdigit():  # Проверка на числовое значение
-        raise ValueError("Введите числовое значение")
+#         if len(card_number) == 16:  # Маскировка для 16 символов
+#             masked_number =  f"{card_number[:4]} {card_number[4:6]}** **** {card_number[-4:]}"
+#             loger_func.info("Успешная маскировка номера карты: %s", masked_number)
+#             return masked_number
+#
+#         elif len(card_number) == 21:  # Маскировка для 21 символа
+#             masked_number = f"{card_number[:11]}******{card_number[-4:]}"
+#             loger_func.info("Успешная маскировка номера карты: %s", masked_number)
+#             return masked_number
+#
+#         raise ValueError("Неверный номер карты! Введите 16 или 21 символ.")
+#     except ValueError as e:
+#         loger_func.error("%s", str(e), exc_info=True)
+#         raise
 
-    if len(card_number) == 16:  # Маскировка для 16 символов
-        return f"{card_number[:4]} {card_number[4:6]}** **** {card_number[-4:]}"
 
-    elif len(card_number) == 21:  # Маскировка для 21 символа
-        return f"{card_number[:11]}******{card_number[-4:]}"
-
-    raise ValueError("Неверный номер карты! Введите 16 или 21 символ.")
-
-# test = "1234589674125896"
-# get_mask_card_number(test)
 
 
 def get_mask_account(number_account: Union[int, str]) -> str:
     """Функция для маскирования номера аккаунта, оставляя 4 последние цифры"""
-    account_number = str(number_account)
+    account_number = str(number_account).replace(" ", "")
     visible_numbers = account_number[-4:]
-    if not visible_numbers.isdigit():  # Проверка на числовое значение
-        raise ValueError("Введите числовое значение")
-    if len(visible_numbers) < 4:  # Проверка на длину
-        raise ValueError("Короткий номер")
+    try:
+        if not visible_numbers.isdigit():  # Проверка на числовое значение
+            raise ValueError("Введите числовое значение")
+        if len(visible_numbers) < 4:  # Проверка на длину
+            raise ValueError("Короткий номер")
+    except ValueError as t:
+        loger_func.error("%s", number_account, exc_info=True)
+        raise
 
-    return f"** {visible_numbers}"
 
+    masked_account_number = f"** {visible_numbers}"
+    loger_func.info("Успешная маскировка номера карты: %s", number_account)
+    return masked_account_number
 
-# test = "1234 5678 9876 5435"
-# result = get_mask_card_number(test)
-# print(result)
+# test0 = "1230 8520 9632 7412"
+# get_mask_card_number(test0)
+test = "sfvf"
+get_mask_account(test)
+

@@ -1,0 +1,22 @@
+2025-04-13 11:07:10,322 masks.py get_mask_account INFO: Успешная маскировка номера карты: 1230 8520 9632 7412
+2025-04-13 11:07:19,170 masks.py get_mask_account INFO: Успешная маскировка номера карты: 1230 8520 9632 75412
+2025-04-13 11:07:23,498 masks.py get_mask_account INFO: Успешная маскировка номера карты: 1230 8520 9632 7565636412
+2025-04-13 11:07:31,645 masks.py get_mask_account INFO: Успешная маскировка номера карты: 1230 8520 9632 7565635636412
+2025-04-13 11:07:47,073 masks.py get_mask_account ERROR: 55
+Traceback (most recent call last):
+  File "C:\Users\AGMan\Documents\Python_homework_1\src\masks.py", line 47, in get_mask_account
+    raise ValueError("Короткий номер")
+ValueError: Короткий номер
+2025-04-13 11:08:15,063 masks.py get_mask_account INFO: Успешная маскировка номера карты: 5522
+2025-04-13 11:09:43,440 masks.py get_mask_account INFO: Успешная маскировка номера карты: 5522
+2025-04-13 11:10:20,966 masks.py get_mask_account ERROR: sfvf
+Traceback (most recent call last):
+  File "C:\Users\AGMan\Documents\Python_homework_1\src\masks.py", line 45, in get_mask_account
+    raise ValueError("Введите числовое значение")
+ValueError: Введите числовое значение
+2025-04-13 11:10:58,316 utils.py read_file INFO: Успешное чтение JSON: C:\Users\AGMan\Documents\Python_homework_1\src\../data/operations.json
+2025-04-13 11:18:08,433 masks.py get_mask_account ERROR: sfvf
+Traceback (most recent call last):
+  File "C:\Users\AGMan\Documents\Python_homework_1\src\masks.py", line 45, in get_mask_account
+    raise ValueError("Введите числовое значение")
+ValueError: Введите числовое значение
