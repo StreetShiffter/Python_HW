@@ -15,8 +15,12 @@ Traceback (most recent call last):
     raise ValueError("Введите числовое значение")
 ValueError: Введите числовое значение
 2025-04-13 11:10:58,316 utils.py read_file INFO: Успешное чтение JSON: C:\Users\AGMan\Documents\Python_homework_1\src\../data/operations.json
-2025-04-13 11:18:08,433 masks.py get_mask_account ERROR: sfvf
+
+проба
+
+
+2025-04-15 09:15:43,290 masks.py get_mask_card_number ERROR: Введите числовое значение
 Traceback (most recent call last):
-  File "C:\Users\AGMan\Documents\Python_homework_1\src\masks.py", line 45, in get_mask_account
+  File "C:\Users\AGMan\Documents\Python_homework_1\src\masks.py", line 19, in get_mask_card_number
     raise ValueError("Введите числовое значение")
 ValueError: Введите числовое значение
