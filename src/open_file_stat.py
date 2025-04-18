@@ -25,3 +25,4 @@ def open_excel(filename: str) -> List[dict[Any, Any]]:
         return df.to_dict('records')
     except Exception as error:
         raise Exception(f'Ошибка при чтении файла: {str(error)}')
+
