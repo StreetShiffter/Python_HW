@@ -38,3 +38,4 @@ ValueError: Введите числовое значение
 2025-04-19 00:55:38,116 utils.py read_file INFO: Успешное чтение JSON: C:\Users\AGMan\Documents\Python_homework_1\./data/operations.json
 2025-04-19 00:56:50,853 utils.py read_file INFO: Успешное чтение JSON: C:\Users\AGMan\Documents\Python_homework_1\./data/operations.json
 2025-04-19 00:57:58,665 utils.py read_file INFO: Успешное чтение JSON: C:\Users\AGMan\Documents\Python_homework_1\./data/operations.json
+2025-04-19 01:35:42,437 utils.py read_file INFO: Успешное чтение JSON: C:\Users\AGMan\Documents\Python_homework_1\./data/operations.json
