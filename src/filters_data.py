@@ -15,7 +15,7 @@ def finder_info(data_list: list[dict], input_string: str) -> list[dict]:
 
 def counter_description(transaction_list: list[dict], list_description: list) -> dict:
     """Функция подсчета количества операций"""
-    count = dict(Counter())
+    count: dict = dict(Counter())
     for descr_pat in list_description:
         count[descr_pat] = 0
         for transaction in transaction_list:

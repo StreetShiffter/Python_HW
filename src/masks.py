@@ -1,8 +1,13 @@
 from typing import Union
 import logging
+import os
+
+# Получаем путь к текущему скрипту
+script_dir = os.path.dirname(os.path.abspath(__file__))
+file_path_1 = os.path.join(script_dir, "../logs/example.log")
 
 loger_func = logging.getLogger(__name__) # логер к текущему модулю
-file_handler = logging.FileHandler('../logs/example.log', encoding = 'utf-8')
+file_handler = logging.FileHandler(file_path_1, encoding = 'utf-8')
 file_formatter = logging.Formatter('%(asctime)s %(filename)s %(funcName)s %(levelname)s: %(message)s')
 file_handler.setFormatter(file_formatter)
 loger_func.addHandler(file_handler)
@@ -54,8 +59,8 @@ def get_mask_account(number_account: Union[int, str]) -> str:
     loger_func.info("Успешная маскировка номера карты: %s", number_account)
     return masked_account_number
 
-test0 = "1230 8520 9632 7412"
-get_mask_card_number(test0)
-test = "sfvf"
-get_mask_account(test)
+# test0 = "1230 8520 9632 7412"
+# get_mask_card_number(test0)
+# test = "sfvf"
+# get_mask_account(test)
 
