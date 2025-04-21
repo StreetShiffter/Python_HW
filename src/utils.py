@@ -41,6 +41,3 @@ def read_file(filename: str) -> list[dict]:
         print(f"Ошибка при декодировании JSON из файла: {filename}")
         loger_func.error("Ошибка при декодировании JSON из файла: %s", filename, exc_info = True)
         return []
-
-data = read_file(file_path)
-print(data)
